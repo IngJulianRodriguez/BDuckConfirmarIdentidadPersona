@@ -14,7 +14,8 @@ import java.util.Base64;
 public class CodigoVerificacionService {
     @Value("${server.validarInformacionCliente.url}")  // Configura la URL del servidor B en tu archivo application.properties
     private String servervalidarInformacionClienteUrl;
-    public void generarCodigo(Long cedula) {
+    public void generarCodigo(String stringCedula) {
+        Long cedula = Long.parseLong(stringCedula);
         WebClient webClient = WebClient.builder()
                 .baseUrl(servervalidarInformacionClienteUrl)
                 .defaultHeader(HttpHeaders.AUTHORIZATION, "Basic " + encodeCredentials("admin", "admin"))
