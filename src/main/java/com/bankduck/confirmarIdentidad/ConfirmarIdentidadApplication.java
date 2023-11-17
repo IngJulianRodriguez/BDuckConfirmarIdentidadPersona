@@ -1,4 +1,4 @@
-package com.bankduck.ConfirmarIdentidad;
+package com.bankduck.confirmarIdentidad;
 
 import java.util.Arrays;
 import java.util.List;
